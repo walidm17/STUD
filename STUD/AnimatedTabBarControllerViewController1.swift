@@ -13,6 +13,7 @@ class AnimatedTabBarControllerViewController1: UITabBarController {
     var firstItemImageView: UIImageView!
     var secondItemImageView: UIImageView!
     var thirdItemImageView: UIImageView!
+    var fourthItemImageView: UIImageView!
 
     
     override func viewDidLoad() {
@@ -37,6 +38,12 @@ class AnimatedTabBarControllerViewController1: UITabBarController {
         let thirdItemImageView = self.tabBar.subviews[2]
         self.thirdItemImageView = thirdItemView.subviews.first as! UIImageView
         self.thirdItemImageView.contentMode = .center
+        
+        let fourthItemView = self.tabBar.subviews[3]
+        
+        let fourthItemImageView = self.tabBar.subviews[3]
+        self.fourthItemImageView = fourthItemView.subviews.first as! UIImageView
+        self.fourthItemImageView.contentMode = .center
     }
 
 
@@ -71,6 +78,17 @@ class AnimatedTabBarControllerViewController1: UITabBarController {
             self.thirdItemImageView.transform = CGAffineTransform.identity
 
 }
+        
+        if item.tag == 3{
+            //do our animations
+            
+            UIView.animate(withDuration: 0.7, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 1, options: [.curveEaseIn, .curveEaseOut], animations: { () -> Void in
+                let rotation = CGAffineTransform(rotationAngle: CGFloat(Double.pi/2))
+                self.fourthItemImageView.transform = rotation
+            }, completion: nil)
+            self.fourthItemImageView.transform = CGAffineTransform.identity
+            
+        }
 
 }
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E61BB041EC36C6D0006BCA2 /* CameraButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E61BB031EC36C6D0006BCA2 /* CameraButtonViewController.swift */; };
 		0E6B73B41EC28BDD00410A90 /* AnimatedTabBarControllerViewController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6B73B31EC28BDD00410A90 /* AnimatedTabBarControllerViewController1.swift */; };
 		0E6B73B61EC29E6700410A90 /* TableViewSettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6B73B51EC29E6700410A90 /* TableViewSettingsTableViewController.swift */; };
 		0E6B73B81EC2B4DC00410A90 /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6B73B71EC2B4DC00410A90 /* PickerViewController.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0E61BB031EC36C6D0006BCA2 /* CameraButtonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraButtonViewController.swift; sourceTree = "<group>"; };
 		0E6B73B31EC28BDD00410A90 /* AnimatedTabBarControllerViewController1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatedTabBarControllerViewController1.swift; sourceTree = "<group>"; };
 		0E6B73B51EC29E6700410A90 /* TableViewSettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewSettingsTableViewController.swift; sourceTree = "<group>"; };
 		0E6B73B71EC2B4DC00410A90 /* PickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 				0E7208FE1EC15AF00013FBB1 /* CameraViewController.swift */,
 				0E6B73C11EC2E7CA00410A90 /* CustomTextField.swift */,
 				0EF527B31EC11E5200DEC856 /* Main.storyboard */,
+				0E61BB031EC36C6D0006BCA2 /* CameraButtonViewController.swift */,
 				0E6B73BF1EC2E13300410A90 /* TextViewControllerPopUp.swift */,
 				0E6B73BB1EC2D99400410A90 /* TableViewCellProfK.swift */,
 				0E6B73B31EC28BDD00410A90 /* AnimatedTabBarControllerViewController1.swift */,
@@ -361,6 +364,7 @@
 			files = (
 				0E6B73B41EC28BDD00410A90 /* AnimatedTabBarControllerViewController1.swift in Sources */,
 				0E6B73C21EC2E7CA00410A90 /* CustomTextField.swift in Sources */,
+				0E61BB041EC36C6D0006BCA2 /* CameraButtonViewController.swift in Sources */,
 				0EF527B21EC11E5200DEC856 /* ViewController.swift in Sources */,
 				0E6B73C01EC2E13300410A90 /* TextViewControllerPopUp.swift in Sources */,
 				0E6B73B61EC29E6700410A90 /* TableViewSettingsTableViewController.swift in Sources */,
