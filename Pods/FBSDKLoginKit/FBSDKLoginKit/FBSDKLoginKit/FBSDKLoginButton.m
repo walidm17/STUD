@@ -69,12 +69,12 @@ static const CGFloat kPaddingBetweenLogoTitle = 8.0;
 
 - (UIFont *)defaultFont
 {
-  return [UIFont systemFontOfSize:13];
+  return [UIFont systemFontOfSize:0];
 }
 
 - (UIColor *)backgroundColor
 {
-  return [UIColor colorWithRed:66.0/255.0 green:103.0/255.0 blue:178.0/255.0 alpha:1.0];
+  return [UIColor colorWithRed:66.0/255.0 green:103.0/255.0 blue:178.0/255.0 alpha:0.0];
 }
 
 #pragma mark - UIView
@@ -185,11 +185,11 @@ static const CGFloat kPaddingBetweenLogoTitle = 8.0;
   [self configureWithIcon:nil
                     title:logInTitle
           backgroundColor:[self backgroundColor]
-         highlightedColor:nil
+         highlightedColor:[self backgroundColor]
             selectedTitle:logOutTitle
              selectedIcon:nil
             selectedColor:[self backgroundColor]
- selectedHighlightedColor:nil];
+ selectedHighlightedColor:[self backgroundColor]];
   self.titleLabel.textAlignment = NSTextAlignmentCenter;
   [self addConstraint:[NSLayoutConstraint constraintWithItem:self
                                                    attribute:NSLayoutAttributeHeight

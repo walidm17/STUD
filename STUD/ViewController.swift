@@ -10,7 +10,7 @@ import UIKit
 import FacebookLogin
 import FacebookCore
 
-class ViewController: UIViewController {
+class ViewController: UIViewController,  LoginButtonDelegate {
     
     @IBOutlet weak var logoWhite: UIImageView!
    
@@ -20,22 +20,33 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var login: UIButton!
 
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        let loginButton = LoginButton(readPermissions: [ .publicProfile ])
-//        loginButton.center = view.center
-//        
-//        view.addSubview(loginButton)
+let loginButton = LoginButton(readPermissions: [ .publicProfile ])
+loginButton.center = login.center//CGPoint(x: -500, y: -500)
+loginButton.delegate = self
+        if (AccessToken.current != nil) {
+           AccessToken.current = nil
+        }
+
         
+view.addSubview(loginButton)
+        
+
+        // login.addTarget(self, action: #selector(handleFBLogin), for: .touchUpInside)
+    }
+    
+    
+
         
 //  let timer = Timer.scheduledTimer(timeInterval: 1.5, target: self, selector: #selector(timeToMoveOn), userInfo: nil, repeats: false)
    
 //    
 //    func timeToMoveOn() {
 //        self.performSegue(withIdentifier: "toSecondTitle", sender: self)
-  }
+  
     
     
     override func viewWillAppear(_ animated: Bool) {
@@ -83,33 +94,39 @@ class ViewController: UIViewController {
         
 }
     
+    func loginButtonDidCompleteLogin(_ loginButton: LoginButton, result: LoginResult) {
+        switch result {
+        case .failed(let error):
+            print("Failed Authentication Error")
+            print(error)
+            break
+        case .cancelled:
+            print("Facebook Authentication Cancelled")
+            break
+        case .success(_,_,_):
+            performSegue(withIdentifier: "postLogin", sender: nil)
+            
+        }
+    }
+   
+    func loginButtonDidLogOut(_ loginButton: LoginButton) {
+        
+    }
+    
     
     
 // MARK : Actions
     
-    
-    @IBAction func fbLogin(_ sender: UIButton) {
-        let loginManager = LoginManager()
-        loginManager.logIn([ .publicProfile ], viewController: self) { loginResult in
-            switch loginResult {
-            case .failed(let error):
-                print(error)
-            case .cancelled:
-                print("User cancelled login.")
-            case .success(let grantedPermissions, let declinedPermissions, let accessToken):
-                print("Logged in!")
-            }
-    }
-    
-    
-}
-
-
+//    @IBAction func clickFbLogin(_ sender: UIButton) {
+//        let pointOnTheScreen = CGPoint(x: -500, y: -500)
+//        view.hitTest(pointOnTheScreen, with: nil)
+//        
+//    }
 
 }
 
 
-        
+
         // Do any additional setup after loading the view, typically from a nib.
     
 

@@ -50,10 +50,13 @@ extension LoginButton {
     case friendlyBlue
     /// Dark gray background, white text, light gray close button.
     case neutralGray
-
+/// invisible (clear text/background)
+   // case invisible
+    
     internal var sdkColorStyle: FBSDKTooltipColorStyle {
       switch self {
       case .friendlyBlue: return .friendlyBlue
+     //case  .invisible: return .invisible
       case .neutralGray: return .neutralGray
       }
     }

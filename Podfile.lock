@@ -5,6 +5,7 @@ PODS:
   - Bolts/AppLinks (1.8.4):
     - Bolts/Tasks
   - Bolts/Tasks (1.8.4)
+  - ESTabBarController-swift (2.4)
   - FacebookCore (0.2.0):
     - Bolts (~> 1.8)
     - FBSDKCoreKit (~> 4.15)
@@ -19,16 +20,18 @@ PODS:
     - FBSDKCoreKit
 
 DEPENDENCIES:
+  - ESTabBarController-swift
   - FacebookCore
   - FacebookLogin
 
 SPEC CHECKSUMS:
   Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
+  ESTabBarController-swift: af496895039ba10ae60bf825473c45f23fc5c8b6
   FacebookCore: 2cb3f0fbff218e9d3119cec84bae983b232412de
   FacebookLogin: c9d606504735780a9e3002465a615512e0a691a5
   FBSDKCoreKit: c693bad19feb225469eeff14452ba364522ee48b
   FBSDKLoginKit: 1fa529fc622d7b32ebeaffbecd377180833c6d30
 
-PODFILE CHECKSUM: ae141e6f6775f9bb00cf62730e38d283e6b30c20
+PODFILE CHECKSUM: 180da3a18948409423a3fb864f349e3e59bef0e0
 
 COCOAPODS: 1.2.1
